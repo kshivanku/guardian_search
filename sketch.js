@@ -35,7 +35,7 @@ function getUserInput(){
 }
 
 function callapi(){
-    url = 'http://content.guardianapis.com/search?order-by=oldest&page=' + page + '&page-size=200&q=' + query + '&api-key=' + api_key;
+    url = 'https://content.guardianapis.com/search?order-by=oldest&page=' + page + '&page-size=200&q=' + query + '&api-key=' + api_key;
     $.getJSON(url, gotGuardianData);
 }
 
