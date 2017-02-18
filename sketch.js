@@ -7,23 +7,29 @@ var pyear = 0;
 
 function initialize(){
   $("#search_field").keypress(function(event) {
-    alert('Key pressed: ' + event.keyCode);
-    if (event.which == 13 || event.which == 66) {
-      $("#data").empty();
-      $(".empty_screen").hide();
-      page = 1;
-      pyear = 0;
-      event.preventDefault();
-      query = $("#search_field").val();
-      if(query){
-        callapi();
-      }
-      else{
-        $("#intro").show();
-        console.log('no query entered');
-      }
+    if (event.which == 13) {
+      getUserInput();
     }
   });
+  $("#search_form").submit(function(){
+    getUserInput();
+  })
+}
+
+function getUserInput(){
+  $("#data").empty();
+  $(".empty_screen").hide();
+  page = 1;
+  pyear = 0;
+  event.preventDefault();
+  query = $("#search_field").val();
+  if(query){
+    callapi();
+  }
+  else{
+    $("#intro").show();
+    console.log('no query entered');
+  }
 }
 
 function callapi(){

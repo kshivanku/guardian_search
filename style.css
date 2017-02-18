@@ -20,14 +20,9 @@
   clear: both;
 }
 
-
 body {
   background-color: #f8f8f8;
   color: #212121;
-}
-
-#search_box {
-  display: relative;
 }
 
 #search_bg {
@@ -54,10 +49,6 @@ body {
 
 #search_field:focus {
   outline: none;
-}
-
-.container {
-  padding: 16px;
 }
 
 .year_section {
