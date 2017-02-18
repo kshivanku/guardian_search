@@ -7,7 +7,7 @@ var pyear = 0;
 
 function initialize(){
   $("#search_field").keypress(function(event) {
-    // alert('Key pressed: ' + event.keyCode);
+    alert('Key pressed: ' + event.keyCode);
     if (event.which == 13 || event.which == 66) {
       $("#data").empty();
       $(".empty_screen").hide();
