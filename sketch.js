@@ -7,11 +7,13 @@ var pyear = 0;
 
 function initialize(){
   $("#search_field").keypress(function(event) {
+    console.log(event.which);
     if (event.which == 13) {
       getUserInput();
     }
   });
   $("#search_form").submit(function(){
+    console.log("here");
     getUserInput();
   })
 }
