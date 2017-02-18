@@ -36,7 +36,8 @@ function callapi(){
 
 function gotGuardianData(data){
   if(data.response.results.length == 0){
-    $("#no_result").append("<p> It doesn't look like "+query+" was ever in Guardian. Try something else.</p>");
+    $("#no_result").empty();
+    $("#no_result").append("<p> It doesn't look like <span style='font-weight: bold'>"+query+"</span> was ever in Guardian. Try something else.</p>");
     $("#no_result").show();
   }
   else{
